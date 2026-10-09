@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "voiddragons:item/void_dragon_bone"
+  }
+}

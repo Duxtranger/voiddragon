@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "ingredient": {
+    "item": "voiddragons:void_scale"
+  },
+  "result": "voiddragons:void_scale_ingot",
+  "experience": 1.0,
+  "cookingtime": 100
+}

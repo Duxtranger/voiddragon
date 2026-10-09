@@ -1,0 +1,18 @@
+{
+  "itemGroup.voiddragons": "Void Dragons",
+  "item.voiddragons.void_scale": "Void Dragon Scale",
+  "item.voiddragons.void_scale_ingot": "Void Scale Ingot",
+  "item.voiddragons.void_dragon_blood": "Void Dragon Blood",
+  "item.voiddragons.void_dragon_bone": "Void Dragon Bone",
+  "item.voiddragons.void_sword": "Void Sword",
+  "item.voiddragons.void_pickaxe": "Void Pickaxe",
+  "item.voiddragons.void_axe": "Void Axe",
+  "item.voiddragons.void_shovel": "Void Shovel",
+  "item.voiddragons.void_hoe": "Void Hoe",
+  "item.voiddragons.void_helmet": "Void Dragon Helmet",
+  "item.voiddragons.void_chestplate": "Void Dragon Chestplate",
+  "item.voiddragons.void_leggings": "Void Dragon Leggings",
+  "item.voiddragons.void_boots": "Void Dragon Boots",
+  "item.voiddragons.void_dragon_spawn_egg": "Void Dragon Spawn Egg",
+  "entity.voiddragons.void_dragon": "Void Dragon"
+}

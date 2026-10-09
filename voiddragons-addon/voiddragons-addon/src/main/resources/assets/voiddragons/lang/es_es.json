@@ -1,0 +1,18 @@
+{
+  "itemGroup.voiddragons": "Dragones del Vac\u00edo",
+  "item.voiddragons.void_scale": "Escama de Drag\u00f3n del Vac\u00edo",
+  "item.voiddragons.void_scale_ingot": "Lingote de Escama del Vac\u00edo",
+  "item.voiddragons.void_dragon_blood": "Sangre de Drag\u00f3n del Vac\u00edo",
+  "item.voiddragons.void_dragon_bone": "Hueso de Drag\u00f3n del Vac\u00edo",
+  "item.voiddragons.void_sword": "Espada del Vac\u00edo",
+  "item.voiddragons.void_pickaxe": "Pico del Vac\u00edo",
+  "item.voiddragons.void_axe": "Hacha del Vac\u00edo",
+  "item.voiddragons.void_shovel": "Pala del Vac\u00edo",
+  "item.voiddragons.void_hoe": "Azada del Vac\u00edo",
+  "item.voiddragons.void_helmet": "Casco de Drag\u00f3n del Vac\u00edo",
+  "item.voiddragons.void_chestplate": "Peto de Drag\u00f3n del Vac\u00edo",
+  "item.voiddragons.void_leggings": "Grebas de Drag\u00f3n del Vac\u00edo",
+  "item.voiddragons.void_boots": "Botas de Drag\u00f3n del Vac\u00edo",
+  "item.voiddragons.void_dragon_spawn_egg": "Huevo generador de Drag\u00f3n del Vac\u00edo",
+  "entity.voiddragons.void_dragon": "Drag\u00f3n del Vac\u00edo"
+}

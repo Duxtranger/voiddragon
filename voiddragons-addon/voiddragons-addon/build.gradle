@@ -1,0 +1,89 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+    id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
+}
+
+version = '0.1.0'
+group = 'com.voiddragons'
+
+base {
+    archivesName = 'voiddragons-1.20.1'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+
+    runs {
+        configureEach {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            mods {
+                voiddragons {
+                    source sourceSets.main
+                }
+            }
+        }
+        client {
+            property 'forge.enabledGameTestNamespaces', 'voiddragons'
+        }
+        server {
+            property 'forge.enabledGameTestNamespaces', 'voiddragons'
+            args '--nogui'
+        }
+    }
+}
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+repositories {
+    maven {
+        name = 'Curse Maven'
+        url = 'https://cursemaven.com'
+        content { includeGroup 'curse.maven' }
+    }
+    maven { url = 'https://maven.minecraftforge.net/' }
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.3.0'
+
+    // --- Ice and Fire (dependencia del addon) ---
+    // Descomenta cuando quieras compilar contra las clases de Ice and Fire.
+    // Sustituye FILE_ID por el ID del archivo para 1.20.1 que aparece en la URL de CurseForge.
+    // compileOnly fg.deobf('curse.maven:ice-and-fire-dragons-264231:FILE_ID')
+    // Ice and Fire necesita Citadel:
+    // compileOnly fg.deobf('curse.maven:citadel-331936:FILE_ID')
+    // runtimeOnly fg.deobf('curse.maven:ice-and-fire-dragons-264231:FILE_ID')
+    // runtimeOnly fg.deobf('curse.maven:citadel-331936:FILE_ID')
+}
+
+tasks.named('processResources', ProcessResources).configure {
+    var replaceProperties = [mod_version: project.version]
+    inputs.properties replaceProperties
+    filesMatching(['META-INF/mods.toml']) {
+        expand replaceProperties
+    }
+}
+
+tasks.named('jar', Jar).configure {
+    manifest {
+        attributes([
+            'Specification-Title'   : 'voiddragons',
+            'Specification-Vendor'  : 'voiddragons',
+            'Specification-Version' : '1',
+            'Implementation-Title'  : project.name,
+            'Implementation-Version': project.jar.archiveVersion,
+            'Implementation-Vendor' : 'voiddragons'
+        ])
+    }
+    finalizedBy 'reobfJar'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
